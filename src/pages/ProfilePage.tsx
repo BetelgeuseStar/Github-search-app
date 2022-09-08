@@ -43,13 +43,15 @@ function ProfilePage() {
 			<div className='profile'>
 				<div className='profile__main main'>
 					<div className='main__face'>
-						<img className='main__avatar' src={user.avatar_url} alt="avatar" />
-						<div className='main__buttons'>
-							<span className={favourites.find(user => user.login === userPreview.login) ? 'like favourite' : 'like'}>
-								<Icon onClick={() => likeHandler(userPreview)} className='like__heart-border' type='heart-border' />
-								<Icon className='like__heart' type='heart' />
-							</span>
-							<a className='main__btn btn' href={user.html_url} target='_blank'>Github profile</a>
+						<div className='main__top'>
+							<img className='main__avatar' src={user.avatar_url} alt="avatar" />
+							<div className='main__buttons'>
+								<span className={favourites.find(user => user.login === userPreview.login) ? 'like favourite' : 'like'}>
+									<Icon onClick={() => likeHandler(userPreview)} className='like__heart-border' type='heart-border' />
+									<Icon className='like__heart' type='heart' />
+								</span>
+								<a className='main__btn btn' href={user.html_url} target='_blank'>Github profile</a>
+							</div>
 						</div>
 						<div className='profile__extra extra'>
 							<div className='extra__followers'>
